@@ -7,13 +7,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h4 className="text-white font-bold mb-4 text-lg">Contact Us</h4>
-            <p className="text-sm mb-2 opacity-80">123 Design Avenue, Suite 400</p>
-            <p className="text-sm mb-2 opacity-80">Bangalore, Karnataka 560001, India</p>
+            <p className="text-sm mb-2 opacity-80">A-51, Naraina Industrial Area, Phase-I,</p>
+            <p className="text-sm mb-2 opacity-80">New Delhi-110028 (India)</p>
             <p className="text-sm mb-2 opacity-80 flex items-center">
-              <span className="font-semibold text-white mr-2">Email:</span> support@paradisefurniture.com
+              <span className="font-semibold text-white mr-2">Email:</span> contact@paradisefurniture.in
             </p>
             <p className="text-sm opacity-80 flex items-center">
-              <span className="font-semibold text-white mr-2">Phone:</span> +91 98765 43210
+              <span className="font-semibold text-white mr-2">Phone:</span> +91 98181 17790
             </p>
           </div>
           
