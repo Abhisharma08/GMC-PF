@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
   <channel>
-    <title>GMC-PF Product Feed</title>
-    <link>https://gmc-pf.com</link>
+    <title>Paradise Furniture Product Feed</title>
+    <link>https://shop.paradisefurniture.in/</link>
     <description>Premium Furniture Products</description>
     
     <!-- Product 1: MAJESTY HB -->
@@ -10,7 +10,7 @@
       <g:id>majesty-hb</g:id>
       <title>MAJESTY HB - Premium Ergonomic Office Chair</title>
       <description>Premium ergonomic office chair designed for long hours of comfortable working. Features adjustable lumbar support, 4D armrests, and breathable mesh back.</description>
-      <g:link>https://gmc-pf.com/product/majesty-hb</g:link>
+      <g:link>https://shop.paradisefurniture.in/product/majesty-hb</g:link>
       <g:image_link>https://res.cloudinary.com/dfb0umklg/images/f_auto,q_auto/v1755942107/MAJESTY-HB-1/MAJESTY-HB-1.jpg?_i=AA</g:image_link>
       <g:price>16500 INR</g:price>
       <g:currency>INR</g:currency>
@@ -18,7 +18,7 @@
       <g:sku>PF-CHAIR-ERGO-01</g:sku>
       <g:condition>new</g:condition>
       <g:product_type>Furniture > Chairs > Office Chairs</g:product_type>
-      <g:brand>GMC-PF</g:brand>
+      <g:brand>Paradise Furniture</g:brand>
     </item>
     
     <!-- Product 2: MILAN MB -->
@@ -26,7 +26,7 @@
       <g:id>milan-mb</g:id>
       <title>MILAN MB - Elegant Velvet Accent Chair</title>
       <description>Elegant velvet accent chair perfect for living rooms or boutique office spaces. Deeply padded seat with gold-finished metal legs.</description>
-      <g:link>https://gmc-pf.com/product/milan-mb</g:link>
+      <g:link>https://shop.paradisefurniture.in/product/milan-mb</g:link>
       <g:image_link>https://res.cloudinary.com/dfb0umklg/images/f_auto,q_auto/v1755942127/500x500_1/500x500_1.jpg?_i=AA</g:image_link>
       <g:price>24800 INR</g:price>
       <g:currency>INR</g:currency>
@@ -34,7 +34,7 @@
       <g:sku>PF-CHAIR-ACC-02</g:sku>
       <g:condition>new</g:condition>
       <g:product_type>Furniture > Chairs > Accent Chairs</g:product_type>
-      <g:brand>GMC-PF</g:brand>
+      <g:brand>Paradise Furniture</g:brand>
     </item>
     
     <!-- Product 3: PHD-1912 -->
@@ -42,7 +42,7 @@
       <g:id>phd-1912</g:id>
       <title>PHD-1912 - Scandinavian Oak Wood Dining Chair</title>
       <description>Minimalist Scandinavian design dining chair crafted from solid oak wood. Features a gently curved backrest and woven rope seat.</description>
-      <g:link>https://gmc-pf.com/product/phd-1912</g:link>
+      <g:link>https://shop.paradisefurniture.in/product/phd-1912</g:link>
       <g:image_link>https://res.cloudinary.com/dfb0umklg/images/f_auto,q_auto/v1755942308/phd-1912/phd-1912.jpg?_i=AA</g:image_link>
       <g:price>29500 INR</g:price>
       <g:currency>INR</g:currency>
@@ -50,7 +50,7 @@
       <g:sku>PF-CHAIR-DIN-03</g:sku>
       <g:condition>new</g:condition>
       <g:product_type>Furniture > Chairs > Dining Chairs</g:product_type>
-      <g:brand>GMC-PF</g:brand>
+      <g:brand>Paradise Furniture</g:brand>
     </item>
     
     <!-- Product 4: PHE-5126 -->
@@ -58,7 +58,7 @@
       <g:id>phe-5126</g:id>
       <title>PHE-5126 - Oak Wood Dining Chair</title>
       <description>Minimalist Scandinavian design dining chair crafted from solid oak wood. Features a gently curved backrest and woven rope seat.</description>
-      <g:link>https://gmc-pf.com/product/phe-5126</g:link>
+      <g:link>https://shop.paradisefurniture.in/product/phe-5126</g:link>
       <g:image_link>https://res.cloudinary.com/dfb0umklg/images/f_auto,q_auto/v1755942180/phe-5126/phe-5126.jpg?_i=AA</g:image_link>
       <g:price>23600 INR</g:price>
       <g:currency>INR</g:currency>
@@ -66,7 +66,7 @@
       <g:sku>PF-CHAIR-DIN-03</g:sku>
       <g:condition>new</g:condition>
       <g:product_type>Furniture > Chairs > Dining Chairs</g:product_type>
-      <g:brand>GMC-PF</g:brand>
+      <g:brand>Paradise Furniture</g:brand>
     </item>
     
     <!-- Product 5: PHE-5130 -->
@@ -74,7 +74,7 @@
       <g:id>phe-5130</g:id>
       <title>PHE-5130 - Modern Oak Wood Dining Chair</title>
       <description>Minimalist Scandinavian design dining chair crafted from solid oak wood. Features a gently curved backrest and woven rope seat.</description>
-      <g:link>https://gmc-pf.com/product/phe-5130</g:link>
+      <g:link>https://shop.paradisefurniture.in/product/phe-5130</g:link>
       <g:image_link>https://res.cloudinary.com/dfb0umklg/images/f_auto,q_auto/v1755942175/phe-5130/phe-5130.jpg?_i=AA</g:image_link>
       <g:price>14800 INR</g:price>
       <g:currency>INR</g:currency>
@@ -82,7 +82,7 @@
       <g:sku>PF-CHAIR-DIN-03</g:sku>
       <g:condition>new</g:condition>
       <g:product_type>Furniture > Chairs > Dining Chairs</g:product_type>
-      <g:brand>GMC-PF</g:brand>
+      <g:brand>Paradise Furniture</g:brand>
     </item>
     
     <!-- Product 6: STAR -->
@@ -90,7 +90,7 @@
       <g:id>star</g:id>
       <title>STAR - Stylish Dining Chair</title>
       <description>Minimalist Scandinavian design dining chair crafted from solid oak wood. Features a gently curved backrest and woven rope seat.</description>
-      <g:link>https://gmc-pf.com/product/star</g:link>
+      <g:link>https://shop.paradisefurniture.in/product/star</g:link>
       <g:image_link>https://res.cloudinary.com/dfb0umklg/images/f_auto,q_auto/v1755942116/STAR-1-1/STAR-1-1.jpg?_i=AA</g:image_link>
       <g:price>10900 INR</g:price>
       <g:currency>INR</g:currency>
@@ -98,8 +98,6 @@
       <g:sku>PF-CHAIR-DIN-03</g:sku>
       <g:condition>new</g:condition>
       <g:product_type>Furniture > Chairs > Dining Chairs</g:product_type>
-      <g:brand>GMC-PF</g:brand>
+      <g:brand>Paradise Furniture</g:brand>
     </item>
-    
-  </channel>
 </rss>
