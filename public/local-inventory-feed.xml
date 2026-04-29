@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>Paradise Furniture Local Inventory Feed</title>
+    <link>https://shop.paradisefurniture.in/</link>
+    <description>In-store inventory for Paradise Furniture products</description>
+
+    <item>
+      <g:id>majesty-hb</g:id>
+      <g:store_code>A51-NARAINA</g:store_code>
+      <g:availability>in_stock</g:availability>
+      <g:quantity>100</g:quantity>
+      <g:price>16500.00 INR</g:price>
+    </item>
+
+    <item>
+      <g:id>milan-mb</g:id>
+      <g:store_code>A51-NARAINA</g:store_code>
+      <g:availability>in_stock</g:availability>
+      <g:quantity>100</g:quantity>
+      <g:price>24800.00 INR</g:price>
+    </item>
+
+    <item>
+      <g:id>phd-1912</g:id>
+      <g:store_code>A51-NARAINA</g:store_code>
+      <g:availability>in_stock</g:availability>
+      <g:quantity>100</g:quantity>
+      <g:price>29500.00 INR</g:price>
+    </item>
+
+    <item>
+      <g:id>phe-5126</g:id>
+      <g:store_code>A51-NARAINA</g:store_code>
+      <g:availability>in_stock</g:availability>
+      <g:quantity>100</g:quantity>
+      <g:price>23600.00 INR</g:price>
+    </item>
+
+    <item>
+      <g:id>phe-5130</g:id>
+      <g:store_code>A51-NARAINA</g:store_code>
+      <g:availability>in_stock</g:availability>
+      <g:quantity>100</g:quantity>
+      <g:price>14800.00 INR</g:price>
+    </item>
+
+    <item>
+      <g:id>star</g:id>
+      <g:store_code>A51-NARAINA</g:store_code>
+      <g:availability>in_stock</g:availability>
+      <g:quantity>100</g:quantity>
+      <g:price>10900.00 INR</g:price>
+    </item>
+  </channel>
+</rss>
