@@ -18,6 +18,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Paradise Furniture",
   description: "Curated collection of premium chairs.",
+  verification: {
+    google: "em11l5aD75TcnVSO5IyByrpwVU9woRYma9f8oVm8aV4",
+  },
 };
 
 export default function RootLayout({

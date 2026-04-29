@@ -23,7 +23,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation (Centered) */}
-        <div className="hidden sm:flex items-center space-x-10 text-lg font-medium text-gray-700 absolute left-1/2 transform -translate-x-1/2 ">
+        <div className="hidden sm:flex items-center space-x-10 text-lg font-medium text-gray-700 ml-auto">
           
           <Link 
             href="/#collection" 
