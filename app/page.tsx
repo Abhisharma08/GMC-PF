@@ -25,7 +25,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             
             <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-8">
               Welcome to <span className="text-red-500">Paradise Furniture</span>
@@ -37,7 +37,7 @@ export default function Home() {
 
             <a
               href="#collection"
-              className="inline-flex items-center px-8 py-4 rounded-full bg-red-700 text-white font-semibold hover:bg-red-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-red-700 text-white font-semibold hover:bg-red-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Explore Collection
             </a>
