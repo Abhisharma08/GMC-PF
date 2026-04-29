@@ -1,11 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 import ProductGallery from "@/components/ProductGallery";
-import { getProductById, PRODUCTS } from "@/lib/data";
+import { BRAND_NAME, getProductById, PRODUCTS, SITE_URL } from "@/lib/data";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -49,9 +47,14 @@ export default async function ProductLandingPage({ params }: Props) {
     image: product.imageUrl,
     description: product.description,
     sku: product.sku,
+    mpn: product.sku,
+    brand: {
+      "@type": "Brand",
+      name: BRAND_NAME,
+    },
     offers: {
       "@type": "Offer",
-      url: `https://example.com/product/${id}`,
+      url: `${SITE_URL}/product/${id}`,
       priceCurrency: product.currency,
       price: product.price,
       availability: product.availability === "In Stock" 

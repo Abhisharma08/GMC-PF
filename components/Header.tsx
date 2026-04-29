@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
@@ -15,9 +16,11 @@ export default function Header() {
 
         {/* Logo (Left) */}
         <Link href="/" className="flex items-center">
-          <img 
+          <Image
             src="https://res.cloudinary.com/dfb0umklg/images/c_scale,w_170,h_42,dpr_1.5/f_auto,q_auto/v1/paradisefurniture.in/wp-content/uploads/elementor/thumbs/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74.png?_i=AA"
             alt="Paradise Furniture Logo"
+            width={170}
+            height={42}
             className="h-10 md:h-12 w-auto object-contain"
           />
         </Link>
@@ -33,7 +36,7 @@ export default function Header() {
           </Link>
 
           <Link 
-            href="/#footer" 
+            href="/about" 
             className="hover:text-red-700 transition-colors hover:underline underline-offset-4"
           >
             About Us
@@ -50,7 +53,8 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="sm:hidden ml-auto"
+          className="sm:hidden ml-auto text-black"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -63,7 +67,7 @@ export default function Header() {
         <div className="sm:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4 text-gray-700 font-medium">
 
           <Link 
-            href="#collection" 
+            href="/#collection" 
             onClick={() => setOpen(false)}
             className="block hover:text-red-700"
           >
@@ -71,7 +75,7 @@ export default function Header() {
           </Link>
 
           <Link 
-            href="#footer" 
+            href="/about" 
             onClick={() => setOpen(false)}
             className="block hover:text-red-700"
           >

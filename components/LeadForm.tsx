@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2, CheckCircle2, Minus, Plus } from "lucide-react";
+import { Loader2, Minus, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function LeadForm({ productTitle }: { productTitle: string }) {
@@ -38,10 +38,10 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
 
       // Redirect instead of local state
       router.push("/thank-you");
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
       setStatus("error");
-      setErrorMessage(error.message || "An unexpected error occurred.");
+      setErrorMessage(error instanceof Error ? error.message : "An unexpected error occurred.");
     }
   };
   return (
@@ -97,7 +97,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
               name="fullName"
               required
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
-              placeholder="John Doe"
+              placeholder="Amit Sharma"
             />
           </div>
 
@@ -111,7 +111,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
               name="email"
               required
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
-              placeholder="john@example.com"
+              placeholder="amit@example.com"
             />
           </div>
 
@@ -125,7 +125,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
               name="phone"
               required
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
-              placeholder="+1 (555) 000-0000"
+              placeholder="+91 98181 17790"
             />
           </div>
 
@@ -139,7 +139,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
               name="city"
               required
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
-              placeholder="E.g. New York, Bangalore..."
+              placeholder="E.g. New Delhi, Bengaluru..."
             />
           </div>
 
