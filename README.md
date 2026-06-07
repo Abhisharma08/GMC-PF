@@ -39,6 +39,7 @@ This dual-nature approach ensures strict technical compliance with Google Mercha
 │   ├── return-policy/page.tsx     # GMC Compliance
 │   ├── shipping-policy/page.tsx   # GMC Compliance
 │   ├── terms-of-service/page.tsx  # GMC Compliance
+│   ├── checkout/[id]/page.tsx     # Product-specific checkout pages
 │   ├── thank-you/page.tsx         # Conversion Tracking Goal Page
 │   ├── layout.tsx                 # Global Layout (injects Header/Footer)
 │   └── page.tsx                   # Main Landing Page / Catalog
@@ -86,8 +87,12 @@ The Google Sheets integration currently expects your target spreadsheet to have 
 3. `Email`
 4. `Phone`
 5. `City`
-6. `Product`
-7. `Quantity`
+6. `Delivery Address`
+7. `PIN Code`
+8. `Product`
+9. `Quantity`
+10. `Payment Method`
+11. `Order Source`
 
 ### 4. Run the Development Server
 

@@ -1,10 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2, Minus, Plus } from "lucide-react";
+import { CreditCard, Loader2, Minus, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-export default function LeadForm({ productTitle }: { productTitle: string }) {
+type LeadFormProps = {
+  productTitle: string;
+  source?: "product-page" | "checkout-page";
+};
+
+export default function LeadForm({
+  productTitle,
+  source = "product-page",
+}: LeadFormProps) {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -21,8 +29,12 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
       email: formData.get("email"),
       phone: formData.get("phone"),
       city: formData.get("city"),
+      shippingAddress: formData.get("shippingAddress"),
+      postalCode: formData.get("postalCode"),
+      paymentMethod: formData.get("paymentMethod"),
       quantity: quantity.toString(), // Taken from state to ensure consistency
       productTitle,
+      orderSource: source,
     };
 
     try {
@@ -83,7 +95,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
       <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 md:p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Secure Checkout</h3>
         <p className="text-gray-600 mb-6">
-          Enter your shipping details. Payment will be collected securely upon delivery or via invoice.
+          Enter your shipping details and place your order. Payment is collected by invoice, bank transfer, or cash on delivery after confirmation.
         </p>
 
         <div className="space-y-4">
@@ -143,6 +155,62 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
             />
           </div>
 
+          <div>
+            <label htmlFor="shippingAddress" className="block text-sm font-medium text-gray-700 mb-1">
+              Delivery Address <span className="text-red-500">*</span>
+            </label>
+            <textarea
+              id="shippingAddress"
+              name="shippingAddress"
+              required
+              rows={3}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none resize-none"
+              placeholder="House / office number, street, area"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="postalCode" className="block text-sm font-medium text-gray-700 mb-1">
+              PIN Code <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              required
+              inputMode="numeric"
+              pattern="[0-9]{6}"
+              maxLength={6}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
+              placeholder="110028"
+            />
+          </div>
+
+          <fieldset className="space-y-3">
+            <legend className="block text-sm font-medium text-gray-700">
+              Payment Method <span className="text-red-500">*</span>
+            </legend>
+            <label className="flex items-start gap-3 rounded-lg border border-gray-300 p-4 cursor-pointer hover:border-red-600 transition-colors">
+              <input
+                type="radio"
+                name="paymentMethod"
+                value="Cash on Delivery / Invoice"
+                required
+                defaultChecked
+                className="mt-1 accent-red-700"
+              />
+              <span>
+                <span className="flex items-center text-sm font-semibold text-gray-900">
+                  <CreditCard className="w-4 h-4 mr-2 text-red-700" />
+                  Cash on Delivery / Invoice
+                </span>
+                <span className="block text-sm text-gray-600 mt-1">
+                  We confirm availability, delivery charges, and payment instructions before dispatch.
+                </span>
+              </span>
+            </label>
+          </fieldset>
+
           {status === "error" && (
             <div className="p-3 bg-red-50 text-red-700 text-sm rounded-lg border border-red-200">
               {errorMessage}
@@ -165,7 +233,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
           </button>
           
           <p className="text-xs text-center text-gray-500 mt-4">
-            By submitting this form, you agree to our Terms of Service and Privacy Policy.
+            By placing this order, you agree to our Terms of Service, Privacy Policy, Return Policy, and Shipping Policy.
           </p>
         </div>
       </div>

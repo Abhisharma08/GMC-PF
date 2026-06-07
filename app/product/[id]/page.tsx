@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ShoppingCart } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 import ProductGallery from "@/components/ProductGallery";
 import { BRAND_NAME, getProductById, PRODUCTS, SITE_URL } from "@/lib/data";
@@ -28,6 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.title} | Paradise Furniture`,
     description: product.description,
+    alternates: {
+      canonical: `${SITE_URL}/product/${id}`,
+    },
   };
 }
 
@@ -55,6 +59,7 @@ export default async function ProductLandingPage({ params }: Props) {
     offers: {
       "@type": "Offer",
       url: `${SITE_URL}/product/${id}`,
+      checkoutPageURLTemplate: `${SITE_URL}/checkout/${id}`,
       priceCurrency: product.currency,
       price: product.price,
       availability: product.availability === "In Stock" 
@@ -119,6 +124,20 @@ export default async function ProductLandingPage({ params }: Props) {
                   ))}
                 </ul>
               )}
+            </div>
+
+            <div className="mb-8">
+              <Link
+                href={`/checkout/${product.id}`}
+                className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-red-700 px-8 py-4 text-lg font-bold text-white shadow-lg hover:bg-red-800 hover:shadow-xl transition-all"
+              >
+                <ShoppingCart className="w-5 h-5 mr-3" />
+                Buy Now
+              </Link>
+              <p className="mt-3 text-sm text-gray-600">
+                Complete checkout online. Payment is finalized by invoice, bank transfer, or cash
+                on delivery after order confirmation.
+              </p>
             </div>
 
             {/* Lead Generation Form */}

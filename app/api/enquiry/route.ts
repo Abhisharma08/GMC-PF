@@ -5,10 +5,31 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { fullName, email, phone, city, quantity, productTitle } = body;
+    const {
+      fullName,
+      email,
+      phone,
+      city,
+      shippingAddress,
+      postalCode,
+      quantity,
+      productTitle,
+      paymentMethod,
+      orderSource,
+    } = body;
 
     // Basic validation
-    if (!fullName || !email || !phone || !city || !quantity) {
+    if (
+      !fullName ||
+      !email ||
+      !phone ||
+      !city ||
+      !shippingAddress ||
+      !postalCode ||
+      !quantity ||
+      !productTitle ||
+      !paymentMethod
+    ) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -37,7 +58,7 @@ export async function POST(req: Request) {
       
       await sheets.spreadsheets.values.append({
         spreadsheetId,
-        range: "Sheet1!A:G", // Adjusted to G to fit 7 columns
+        range: "Sheet1!A:K",
         valueInputOption: "USER_ENTERED",
         requestBody: {
           values: [
@@ -47,8 +68,12 @@ export async function POST(req: Request) {
               email,
               phone,
               city,
+              shippingAddress,
+              postalCode,
               productTitle,
               quantity,
+              paymentMethod,
+              orderSource || "website",
             ],
           ],
         },

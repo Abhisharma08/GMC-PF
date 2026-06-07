@@ -114,7 +114,7 @@ export default function Home() {
                     </div>
 
                     <Link
-                      href={`/product/${product.id}`}
+                      href={`/checkout/${product.id}`}
                       className="inline-flex items-center justify-center px-5 py-3 sm:px-6 rounded-xl bg-red-700 text-white font-semibold hover:bg-red-800 group-hover:shadow-md transition-all duration-300"
                     >
                       <span className="mr-2">Buy Now</span>
