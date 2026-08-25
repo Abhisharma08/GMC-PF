@@ -114,10 +114,10 @@ export default function Home() {
                     </div>
 
                     <Link
-                      href={`/checkout/${product.id}`}
+                      href={`/product/${product.id}`}
                       className="inline-flex items-center justify-center px-5 py-3 sm:px-6 rounded-xl bg-red-700 text-white font-semibold hover:bg-red-800 group-hover:shadow-md transition-all duration-300"
                     >
-                      <span className="mr-2">Buy Now</span>
+                      <span className="mr-2">View Details</span>
                       <ArrowRight className="w-5 h-5 hidden sm:inline-block" />
                     </Link>
 

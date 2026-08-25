@@ -127,6 +127,29 @@ export default async function CheckoutPage({ params }: Props) {
             </div>
 
             <LeadForm productTitle={product.title} source="checkout-page" />
+            
+            {/* Trust Indicators */}
+            <div className="mt-10 pt-8 border-t border-gray-200">
+              <p className="text-sm text-gray-600 font-semibold mb-4">Safe & Secure Ordering</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span>Verified seller since 2024</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span>Secure checkout process</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span>Multiple payment options</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span>Guaranteed delivery</span>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </main>

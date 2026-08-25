@@ -59,13 +59,24 @@ export default async function ProductLandingPage({ params }: Props) {
     offers: {
       "@type": "Offer",
       url: `${SITE_URL}/product/${id}`,
-      checkoutPageURLTemplate: `${SITE_URL}/checkout/${id}`,
       priceCurrency: product.currency,
       price: product.price,
       availability: product.availability === "In Stock" 
         ? "https://schema.org/InStock" 
         : "https://schema.org/OutOfStock",
-      itemCondition: "https://schema.org/NewCondition"
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "Organization",
+        name: BRAND_NAME,
+      }
+    },
+    potentialAction: {
+      "@type": "BuyAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/checkout/${id}`,
+        actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+      }
     }
   };
 
